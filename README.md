@@ -17,4 +17,28 @@ Voici un exemple de base pour créer une présentation avec PySlide _(je vous re
 ```python
 from pyslide import Presentation, Slide
 from pyslide.elements import Title, BulletList, MultiLineCodeBlock
+
+presentation = Presentation(
+    title="Ma super présentation",
+    author="Moi",
+)
+presentation.add_slide(
+    Slide(
+        elements=[
+            Title("Bienvenue dans PySlide !"),
+            BulletList(
+                items=[
+                    "Créer des présentations rapidement",
+                    "Utiliser Python pour automatiser",
+                    "Gagner du temps"
+                ]
+            ),
+            MultiLineCodeBlock(
+                code="""print("Hello, PySlide!")""",
+                language="python"
+            )
+        ]
+    )
+)
+presentation.save("ma_super_presentation.pptx")
 ```

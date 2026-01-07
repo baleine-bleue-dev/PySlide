@@ -1,8 +1,9 @@
 class Presentation:
-    def __init__(self, title, author):
+    def __init__(self, title, author, id: str | None):
         self.title = title
         self.author = author
         self.slides = []
+        self.id = id if id is not None else self.generate_id()
 
     def add_slide(self, slide):
         self.slides.append(slide)
