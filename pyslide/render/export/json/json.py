@@ -1,7 +1,7 @@
-import json
-
 from pyslide import Presentation
 from pyslide.elements import Title, Text, BulletList, InLineCodeBlock, MultiLineCodeBlock
+
+import json
 
 def save_to_json(filepath: str, filename: str):
     """Save data to a JSON file.
